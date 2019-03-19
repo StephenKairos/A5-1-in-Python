@@ -12,3 +12,42 @@ It does a few things:
 5. Produces the ciphertext with the use of XOR.
 
 It will do this both to encrypt the data and decrypt it, and compares the resulting plaintext with the initial input. 
+
+Running `run.bat` should give you the output (or something similar, if you altered the input file):
+
+```
+C:\Path\To\Dir>py -3 a51.py abc 0111110101101101110111011011110111001100101101001111001101100110
+Encrypting...
+Unprocessed Arguments
+Key:  0111110101101101110111011011110111001100101101001111001101100110
+Plaintext:  abc
+Processing...
+Processing complete.
+Assigning Keys to Registers...
+X:  0111110101101101110
+Y:  1110110111101110011001
+Z:  01101001111001101100110
+Keystream:  000100111000110001000001
+Plaintext:  011000010110001001100011
+Binary Ciphertext:  011100101110111000100010
+24
+Normal Ciphertext:  rî"
+
+Testing Results...
+Unprocessed Arguments
+Key:  0111110101101101110111011011110111001100101101001111001101100110
+Plaintext:  rî"
+Processing...
+Processing complete.
+Assigning Keys to Registers...
+X:  0111110101101101110
+Y:  1110110111101110011001
+Z:  01101001111001101100110
+Keystream:  000100111000110001000001
+Plaintext:  011100101110111000100010
+Binary Ciphertext:  011000010110001001100011
+24
+Normal Ciphertext:  abc
+
+Test Result:  True
+```
